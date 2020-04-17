@@ -6,6 +6,11 @@
 
 <script>
 export default {
+  computed: {
+    id() {
+      return this.$route.params.id
+    }
+  },
   head() {
     return {
       title: 'Event #' + this.id,
@@ -16,11 +21,6 @@ export default {
           content: 'What you need to know about event #' + this.id
         }
       ]
-    }
-  },
-  computed: {
-    id() {
-      return this.$route.params.id
     }
   }
 }
